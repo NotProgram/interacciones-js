@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background: url('../img/fondo2.jpg');
+    background-size: cover;
+    transition: .5s;
+}
+
+body#body.bg2{
+    background: url('../img/fondo1.png');
+    background-size: cover;
+    transition: .5s;
+}
+
+#interacciones {
+    width: 90%;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: rgba(78, 78, 78, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border: 1px solid #fff;
+}
+
+#interacciones h2 {
+    color: aliceblue;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#interacciones button {
+    color: aliceblue;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.button {
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+#cont-figura {
+    width: 90%;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: rgba(78, 78, 78, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border: 1px solid #fff;
+}
+
+#figura {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    margin: 20px auto;
+    transition: 0.4s;
+}
+
+#figura.circulo {
+    transform: rotate(-300deg);
+    border-radius: 50%;
+}
+
+#figura.rectangulo {
+    width: 500px;
+}
+
+.gradiente {
+    background-image: linear-gradient(to right, #582ad6, #02db9a);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#figura.gif {
+    background: url('../img/perro-bailando.gif');
+}
+
+#figura.ondas {
+    position: relative;
+    overflow: hidden;
+}
+
+#figura.ondas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #b6dcfc, #4e96b8);
+    opacity: 0.2;
+    z-index: 1;
+    transform-origin: center bottom;
+    transform: scaleY(0.2) translateZ(0);
+    animation: wave-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: scaleY(0) translateZ(0);
+    }
+
+    50% {
+        transform: scaleY(1) translateZ(0);
+    }
+
+    100% {
+        transform: scaleY(0) translateZ(0);
+    }
+}
+
+#figura.rombo {
+    transform: rotate(45deg);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(39, 77, 148);
+}
+
+#figura.triangulo {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(104, 46, 46);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+#panel-lateral {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: -450px;
+    top: 0;
+    background-color: rgb(255, 245, 245);
+    z-index: 998;
+    padding-top: 150px;
+    padding-left: 20px;
+    transition: .5s;
+}
+
+#panel-lateral h3 {
+    color: rgb(12, 12, 12);
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#panel-lateral a {
+    display: block;
+    padding: 20px;
+    width: 220px;
+    background: #000000;
+    color: aliceblue;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+#panel-lateral a:hover {
+    background-color: #4e96b8;
+}
+
+#panel-lateral.active {
+    left: 0px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #000000;
+    font-size: 3em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* 
+#panel-lateral.close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000000;
+    font-size: 3em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+} */
+
+#panel-superior{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -2000px    ;
+    background: url('../img/gif2.webp');
+    background-size: cover;
+    z-index: 999;
+    padding-top: 150px;
+    padding-left: 20px;
+    transition: .5s;
+}
+
+#panel-superior.active2{
+    top: 0px;
+}
+
+.close2{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: #ffff;
+    font-size: 3em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
